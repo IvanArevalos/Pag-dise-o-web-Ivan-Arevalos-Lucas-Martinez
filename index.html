@@ -4,54 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Las Obras del Nomade</title>
+    <link rel="icon" href="./imgs/logo.png">
+    <title>El Nómade Construcciones</title>
 </head>
 <body>
-    <header>
-    <h1>El Nomade Construcciones</h1>
-    <a href="#">Inicio</a>
-    <a href="#">¿Quienes somos?</a>
-    <a href="#">Contacto</a>
-    </header>
-    <br>
-    <main>
-        <section id="Inicio">
-            <div>
-            <h2>Bienvenidos a El nomade Construcciones</h2>
-            <p>Nos especializamos en la construcción de viviendas y obras de gran envergadura.</p>
-            <p>Contamos con un equipo de profesionales altamente capacitados y con amplia experiencia en el sector.</p>
-            <p>Nuestro objetivo es ofrecer un servicio de calidad, adaptado a las necesidades de cada cliente.</p>
-            <p>Nos comprometemos a cumplir con los plazos de entrega y a mantener una comunicación constante durante todo el proceso de construcción.</p>
-            </div>
-            <div>
-                <img src="#" alt="Nomade Construcciones logo featuring a stylized house with bold modern lines set against a clean background conveying professionalism and reliability">
-                <!-- aca tendria que ir (o al menos como lo pense), una imagen de la cara de un nomade/indio americano, con el mismo estilo del icono del nomade que habiamos hecho -->
-            </div>
-        </section>
-        <br>
-        <section>
-            <h2>Servicios</h2>
-            <ul>
-                <li>Construcción de viviendas</li>
-                <li>Reformas y remodelaciones</li>
-                <li>Proyectos a medida</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Contacto</h2>
-            <form action="">
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required>
+<!-- HEADER -->
+<header>
+    <img src="./imgs/logo.png" alt="Logo ElNómade" style="height: 90px; padding: 10px; border-radius: 50%;">
+    <h1>El Nómade Construcciones</h1>
+    <nav>
+        <a href="#Inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+<!-- INICIO -->
+<section id="Inicio">
+  <div class="inicio-texto">
+    <h2>Bienvenidos a El Nómade Construcciones</h2>
+    <p>Somos una empresa dedicada a materializar sueños a través de la construcción. Desde pequeñas reformas hasta desarrollos de gran escala, trabajamos con profesionalismo y pasión en cada proyecto.</p>
+    <p>Nos especializamos en la construcción de viviendas y obras de gran envergadura, brindando soluciones personalizadas que se adaptan a los tiempos y necesidades del cliente.</p>
+    <p>Contamos con un equipo humano altamente calificado, comprometido con los valores de responsabilidad, eficiencia y excelencia.</p>
+    <p>Creemos en la comunicación constante y en construir relaciones de confianza, no solo edificios. Nuestro compromiso es claro: entregar calidad, en tiempo y forma.</p>
+    <p>En El Nómade, cada proyecto es una oportunidad para dejar huella, construir comunidad y mejorar el entorno.</p>
+  </div>
+  <div class="inicio-imagen">
+    <img src="./imgs/ElNomade.png" alt="Rostro del Nómade">
+  </div>
+</section>
 
-                <label for="message">Mensaje:</label>
-                <textarea id="message" name="message" required></textarea>
 
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-    </main>
+<!-- SERVICIOS -->
+<section id="servicios">
+  <h2>Servicios Que Prestamos</h2>
+  <div class="tarjetas-servicios">
+    <!-- Tarjeta 1 -->
+    <div class="tarjeta">
+      <div class="tarjeta-img" style="background-image: url('./imgs/Servicio1.jpg');"></div>
+      <div class="tarjeta-contenido">
+        <h3>Construcción de viviendas</h3>
+        <p>Desde los cimientos hasta los detalles finales. Creamos hogares funcionales, resistentes y personalizados para cada familia.</p>
+      </div>
+    </div>
+    <!-- Tarjeta 2 -->
+    <div class="tarjeta">
+      <div class="tarjeta-img" style="background-image: url('./imgs/Servicio2.jpg');"></div>
+      <div class="tarjeta-contenido">
+        <h3>Reformas y remodelaciones</h3>
+        <p>Transformamos espacios existentes en ambientes modernos y cómodos, cuidando cada detalle en estructura y estética.</p>
+      </div>
+    </div>
+    <!-- Tarjeta 3 -->
+    <div class="tarjeta">
+      <div class="tarjeta-img" style="background-image: url('./imgs/Servicio3.jpg');"></div>
+      <div class="tarjeta-contenido">
+        <h3>Proyectos a medida</h3>
+        <p>Proyectamos y ejecutamos obras únicas según los requerimientos del cliente, combinando creatividad y experiencia técnica.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section id="galeria">
+  <h2>Trabajos realizados</h2>
+  <div class="galeria-grid">
+    <div class="galeria-item">
+        <img src="./imgs/Trabajo1.png" alt="Casa terminada en Tigre">
+        <div class="galeria-hover">Vivienda familiar - Tigre</div>
+    </div>
+    <div class="galeria-item">
+        <img src="./imgs/Trabajo2.png" alt="Reforma casa">
+        <div class="galeria-hover">Reforma de cocina moderna - Vicente López</div>
+    </div>
+    <div class="galeria-item">
+        <img src="./imgs/Trabajo3.png" alt="Ampliación de obra">
+        <div class="galeria-hover">Ampliación de vivienda - San Isidro</div>
+    </div>
+
+    <div class="galeria-item">
+        <img src="./imgs/Trabajo4.png" alt="Obra en construcción">
+        <div class="galeria-hover">Nueva Obra - Escobar</div>
+    </div>
+    <div class="galeria-item">
+        <img src="./imgs/Trabajo5.png" alt="Nuevas oficinas">
+        <div class="galeria-hover">Oficinas modernas - Palermo</div>
+    </div>
+    <div class="galeria-item">
+        <img src="./imgs/Trabajo6.png" alt="Cabaña Tigre">
+        <div class="galeria-hover">Complejo de cabañas - Delta</div>
+    </div>
+    </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <div class="contacto-contenedor">
+    <div class="contacto-info">
+      <h3>Dirección:</h3>
+      <p>4820 Carlos Villate</p>
+      <p>Buenos Aires, Vicente Lopez, Munro</p>
+
+      <h3>Número de teléfono:</h3>
+      <p>(+54 11) 2389 6485</p>
+
+      <h3>Email:</h3>
+      <p>info@elnomade.com.ar</p>
+    </div>
+
+    <form class="contacto-form">
+      <input type="text" placeholder="Nombre" name="name" required>
+      <input type="email" placeholder="Correo electrónico*" name="email" required>
+      <input type="text" placeholder="Teléfono" name="phone">
+      <textarea placeholder="Mensaje*" name="message" required></textarea>
+      <button type="submit">Enviar mensaje</button>
+    </form>
+  </div>
+</section>
+<a href="https://wa.me/5491123896485" class="whatsapp-float" target="_blank" aria-label="Chatear por WhatsApp">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+</a>
+
 </body>
 </html>

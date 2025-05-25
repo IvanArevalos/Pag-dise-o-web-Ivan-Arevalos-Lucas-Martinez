@@ -1,41 +1,297 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-.bebas-neue-regular {
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+:root {
+    --bg-color: beige;
+    --text-color: #222;
+    --accent-color: black;
 }
-
 * {
-    font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
-    background-color: beige;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-width: 2px 0; /* Solo borde arriba y abajo */
-    border-style: solid;
-    border-color: white;
-    border-radius: 0; /* Sin bordes redondeados */
-    margin: 0;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    padding: 10px 20px;
 }
-header h1{
+header h1 {
     font-family: 'Bebas Neue', sans-serif;
-    text-decoration:underline;
+    font-size: 2rem;
+    text-decoration: underline;
 }
-#Inicio{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center; /* Centra verticalmente la segunda columna */
-    justify-items: end;  /* Alinea la segunda columna a la derecha */
-    border-width: 0 0 2px 0; /* Solo borde arriba y abajo */
-    border-style: solid;
-    border-color: white;
-    border-radius: 0; /* Sin bordes redondeados */
+header nav {
+    display: flex;
+    gap: 15px;
+}
+header a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    transition: 0.3s;
+}
+header a:hover {
+    color: var(--accent-color);
+}
+
+/* INICIO */
+#Inicio {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 80px;
+    padding: 60px 40px;
+    border-bottom: 2px solid white;
+    background-color: #f5f5dc;
+}
+.inicio-texto {
+    flex: 1;
+    min-width: 320px;
+    max-width: 600px;
+    padding: 10px 20px;
+}
+.inicio-texto h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.inicio-texto h2 span {
+    color: #222;
+    text-decoration: underline;
+}
+.inicio-texto p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+.inicio-imagen {
+    flex: 0 0 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inicio-imagen img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+/* SERVICIOS */
+#servicios .tarjetas-servicios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 3% 0 5% 0px;
 
 }
-header a{
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    color: black; /* Cambia el color*/
+#servicios h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 20px;
+    color: #222;
+}
+.tarjeta {
+    background-color: white;
+    border-radius: 10px;
+    width: 320px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+.tarjeta:hover {
+    transform: scale(1.02);
+}
+.tarjeta-img {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+.tarjeta-contenido {
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: flex-end;
+    align-content: center;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
+.tarjeta h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    color: black;
+}
+.tarjeta p {
+    font-size: 1rem;
+    color: #444;   
+}
+
+/* GALERIA */
+#galeria {
+    padding: 60px 20px;
+    background-color: #f5f5dc;
+    border-bottom: 2px solid #eee;
+}
+#galeria h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #222;
+}
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+.galeria-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+.galeria-item:hover img {
+    transform: scale(1.05);
+}
+.galeria-hover {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.6);
+    color: #f5f5dc;
+    padding: 10px;
+    font-size: 0.95rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.galeria-item:hover .galeria-hover {
+    opacity: 1;
+}
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+@media (max-width: 900px) {
+    .galeria-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* CONTACTO */
+#contacto {
+    background-image: url("./imgs/Foot.jpg");
+    background-color: #f5f5dc;
+    color: white;
+    padding: 50px 20px;
+    margin: 0;
+    margin-top: 20px;
+}
+.contacto-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+.contacto-info {
+    flex: 1;
+    min-width: 280px;
+}
+.contacto-info h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color: white;
+}
+.contacto-info p {
+    font-size: 1rem;
+    margin: 0;
+    color: #ddd;
+}
+.contacto-form {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contacto-form input,
+.contacto-form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #eee;
+    color: #000;
+    resize: none;
+}
+.contacto-form textarea {
+    height: 120px;
+}
+.contacto-form button {
+    background-color: #222;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    align-self: flex-start;
+}
+.contacto-form button:hover {
+    background-color: #444;
+}
+/* WASAP */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    background-color: #469764;
+    border-radius: 50%;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+.whatsapp-float img {
+    width: 40px;
+    height: 40px;
+    display: block;
 }
